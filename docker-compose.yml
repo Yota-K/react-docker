@@ -1,0 +1,11 @@
+version: "3"
+services:
+  react:
+    container_name: react_test
+    build: .
+    volumes:
+      - ./test-app:/test-app
+    command: yarn start
+    ports:
+      - "3000:3000"
+    tty: true
